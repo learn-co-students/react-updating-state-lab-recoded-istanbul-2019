@@ -37,11 +37,8 @@ export class YouTubeDebugger extends Component {
     }
 
     handleClick = (e) => {
-        if (e.target.className === "bitrate") {
-            this.changeBitrate();
-        } else {
-            this.changeRes();
-        }
+        console.log(e.target);
+        e.target.className === "bitrate" ? this.changeBitrate() : this.changeRes();
     }
     render() {
         return (
