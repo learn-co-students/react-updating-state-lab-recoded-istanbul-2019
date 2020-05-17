@@ -35,11 +35,19 @@ export class YouTubeDebugger extends Component {
             }
         })
     }
+
+    handleClick = (e) => {
+        if (e.target.className === "bitrate") {
+            this.changeBitrate();
+        } else {
+            this.changeRes();
+        }
+    }
     render() {
         return (
             <div>
-                <button className="bitrate" onClick={this.changeBitrate}>Change bitrate</button>
-                <button className="resolution" onClick={this.changeRes}>Change resolution</button>
+                <button className="bitrate" onClick={this.handleClick}>Change bitrate</button>
+                <button className="resolution" onClick={this.handleClick}>Change resolution</button>
             </div>
         )
     }
